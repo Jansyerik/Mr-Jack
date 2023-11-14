@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Үйлчилгээний тухай">
+    <title>Service_profile</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --button-color: #9EDDFF;
+        }
+        body{
+            margin: auto;
+        }
+        main{
+            display: grid;
+            grid-template-rows: 600px 1fr 1fr 3fr 1fr;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .firstSection {
+            width: auto;
+            height: 90vh;
+            position: relative;
+        }
+        header{
+            position: relative;
+            width: 100%;
+            height: 8vh;
+        }
+        .servicePro {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .imageContainer{
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+        }
+        .image-container img {
+            min-width: 30%; 
+            min-height: 40%;
+        }
+        .proContent{
+            position: absolute;
+            width: 40%;
+            height: 20vh;
+            top: 25vh;
+            left:20%;
+        }
+        .proContent{
+            display: flex;
+            flex-flow: column wrap;
+            align-items: start;
+        }
+        .servicePro p {
+            color: blue;
+        }
+        .servicePro span {
+            color: #4BAE4F;
+            font-weight: bold;
+        }
+        .extraSelection{
+            width: 50%;
+            height: 15vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            flex-wrap: wrap;
+            margin-top: 2em;
+            padding-left: 0;
+            row-gap: 15px;
+        }
+        button {
+            width: auto;
+            height: 2em;
+            background-color: var(--button-color);
+            margin-right: 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+            border: none;
+        }
+        section {
+            width: 70%;
+            padding-left: 8%;
+            padding-right: 8%;
+        }
+        hr {
+            size: 1;
+            color: black;
+            width: 45%;
+            margin-left: 0;
+        }
+        .gmap_canvas {
+            overflow:hidden;
+            height:330px;
+            width:330px
+        }
+        .gmap_canvas iframe {
+            position:relative;
+            z-index:2
+        }
+        p {
+            margin: 0;
+            margin-top: 10px;
+        }
+        li {
+            list-style-type: none;
+            margin: 10px;
+            margin-left: 0;
+            margin-top: 0;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-around;
+        }
+        time {
+            font-weight: 500;
+        }
+        .contuct1 div {
+            height: 1.5em;
+            display: flex;
+            justify-content: space-between;
+        }
+      </style>
+</head>
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+    <main>
+        <section class="firstSection">
+            <article class="servicePro">
+                <div class="imageContainer">
+                    <img src="food1.png" alt="" class="proImage">
+                    <img src="food2.png" alt="" class="proImage">
+                    <img src="food3.png" alt="" class="proImage">
+                </div>
+                <div class="proContent">
+                    <div>
+                        <svg width="80px" height="80px">
+                            <circle cx="40px" cy="40px" r="20px" fill="white" />
+                            <image x="20px" y="20px" width="40px" height="40px" xlink:href="serLogo.png" />
+                        </svg> 
+                    </div>              
+                    <h1 style="color: #FFFFFF; font-size: 30px;">The Indian restaurant Kohinoor</h1>
+                    <p>
+                        <meter class="star1">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </meter> 4.1 (<span>385</span> reviews)
+                    </p>
+                    <p><span class="claimed">Claimed</span> Fast Food, Indian, Asian</p>
+                    <p><span class="openOrclosed">Open</span><time> 10:30 AM-12:00 PM</time><nav>See hours</nav></p>
+                </div>
+                <div class="extraSelection">
+                    <button type="button">Write a review</button>
+                    <button type="button">Add Photo</button>
+                    <button type="button">Share</button>
+                    <button type="button">Save</button>
+                    <button type="button">Website Menu</button>
+                </div>
+                <hr>
+            </article>
+        </section>
+        <section class="locAndHours">
+            <h2>Location and Hours</h2>
+            <div class="LocHour" style="display: flex; margin-bottom: 20px;">
+                <article class="maps" style="width: 330px; height: 400px">
+                    <div class="gmap_canvas">
+                        <iframe src="https://maps.google.com/maps?q=university%20of%20san%20francisco&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"></iframe>
+                    </div>
+                    <p style="font-weight: bold;">Margad center 2nd floor opposite Geser monastery, ikh toiruu street 
+                        Chingeltei district 5th khoroo</p>
+                </article>
+                <article class="schedule" style="width: 250px; height: 400px; display: flex;
+                align-items: center; flex-direction: column; padding-right: 70px; padding-left: 30px;">
+                    <ul style="padding-left: 0; margin-top: 0; width: 100%;">
+                        <li>Mon <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
+                        <li>Tue <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
+                        <li>Wed <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
+                        <li>Thu <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
+                        <li>Fri <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
+                        <li>Sat <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
+                        <li>Sun <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
+                    </ul>
+                    <button type="button">Get Directions</button>
+                </article>
+                <article class="contuct1" style="width: 150px; height: 160px; border: 0.5px solid black; border-radius: 5px; 
+                display: flex; flex-direction: column; padding: 20px;">
+                    <div>
+                        <a href="">kohinoor.com</a>
+                        <i class="fa-brands fa-edge"></i>
+                    </div>
+                    <hr style="width: 100%; margin-top: 2px;">
+                    <div>
+                        <p style="margin-top: 0;">7017-3939</p>
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <hr style="width: 100%; margin-top: 2px;">
+                    <div>
+                        <p>Inside the Flower Hotel, Sansar, Bayanzurkh, Ulaanbaatar, 65030</p>
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                </article>
+            </div>
+            <hr>
+        </section>
+        <section class="youMightAlso">
+            <h2>You Might Also Consider</h2>
+            <article>
+                <h3></h3>
+                <hr>
+                <hr>
+                <hr>
+                <p>
+                    <span></span>
+                    <meter></meter>
+                    <p></p>
+                    <p></p>
+                </p>
+            </article>
+            <article>
+                <h3></h3>
+                <hr>
+                <hr>
+                <hr>
+                <p>
+                    <span></span>
+                    <meter></meter>
+                    <p></p>
+                    <p></p>
+                </p>
+            </article>
+            <article>
+                <h3></h3>
+                <hr>
+                <hr>
+                <hr>
+                <p>
+                    <span></span>
+                    <meter></meter>
+                    <p></p>
+                    <p></p>
+                </p>
+            </article>
+            <article>
+                <h3></h3>
+                <hr>
+                <hr>
+                <hr>
+                <p>
+                    <span></span>
+                    <meter></meter>
+                    <p></p>
+                    <p></p>
+                </p>
+            </article>
+        </section>
+        <section class="recommended">
+            <h2>Recommended Reviews</h2>
+            <article class="startYourReview">
+                <svg class="logo"></svg>
+                <p><b>Username</b>Location</p>
+                <meter>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </meter>
+                <p><b>Start your review of</b>The Indian restaurant</p>
+            </article>
+            <article class="overallRating">
+                <p>Overall rating</p>
+                <meter>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </meter>
+                <p></p>
+            </article>
+        </section>
+        <section>
+            <h2>People Also Viewed</h2>
+            <article></article>
+        </section>
+    </main>   
+    <footer>
+        <h1>Footer</h1>
+    </footer>
+</body>
+</html>
+
+
+<!-- meter tag-iig unelgeend
+ span tag-iig closed now, open until, 
+// on,sar,udur-g time tag-aar
+// css grid ashiglahdaa tuunii min, max zereg function-uudiig ashiglaval zgeer bas template-g ni
+// pixel ashiglah tohildold hussen huseegui media query bichdeg
+// flex-g default baidlaar, harin grid-g iluu specific nuhtsuld ashigladag.
+// Mun nest hiih, jishee &yyyy{.....} huvisagch ashiglah
+// .... is(na>ul) ene ni yg ehnii ul-g shuu gdgiig zaaj ugdug 
+vh, vw uzeh bolomjtoi delgetsiin undur, urgun
+rem html-n fontnii hemjeenees hamaarna, jishee ni html font-size: 10px , .c font-size: 2rem /20px/
+em uuriin parent-iinhaa hemjeenees hamaarna, jishee ni p>span, p font-size: 10px, span font-size: 2rem /20px/
+-->
+
