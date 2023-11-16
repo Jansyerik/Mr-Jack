@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Үйлчилгээний тухай">
-    <title>Service_profile</title> 
+    <meta name="description" content="Үйлчилгээний газар">
+    <title>Үйлчилгээний газрын тухай</title> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         :root {
@@ -15,14 +15,13 @@
         }
         main{
             display: grid;
-            grid-template-rows: 600px 1fr 1fr 3fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 3fr 1fr;
             justify-content: center;
             align-items: center;
         }
         
         .firstSection {
             width: auto;
-            height: 90vh;
             position: relative;
         }
         header{
@@ -47,8 +46,8 @@
         .proContent{
             position: absolute;
             width: 40%;
-            height: 20vh;
-            top: 25vh;
+            height: 150px;
+            top: 25%;
             left:20%;
         }
         .proContent{
@@ -59,22 +58,23 @@
         .servicePro p {
             color: blue;
         }
-        .servicePro span {
+        span {
             color: #4BAE4F;
             font-weight: bold;
         }
         .extraSelection{
-            width: 50%;
-            height: 15vh;
+            width: 500px;
+            height: 100px;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             flex-wrap: wrap;
             margin-top: 2em;
             padding-left: 0;
+            padding-bottom: 20px;
             row-gap: 15px;
         }
         button {
-            width: auto;
+            width: 20ch;
             height: 2em;
             background-color: var(--button-color);
             margin-right: 20px;
@@ -84,16 +84,23 @@
             font-size: 15px;
             border: none;
         }
+        button.but2 {
+            width: 15ch;
+            background-color: #FFFFFF;
+            border: 1px solid black;
+        }
         section {
-            width: 70%;
+            width: auto;
             padding-left: 8%;
             padding-right: 8%;
+            /* border: 1px solid green; */
         }
         hr {
             size: 1;
             color: black;
-            width: 45%;
+            width: 630px;
             margin-left: 0;
+            position: relative;
         }
         .gmap_canvas {
             overflow:hidden;
@@ -126,6 +133,68 @@
             display: flex;
             justify-content: space-between;
         }
+        .rating{
+            position: relative;
+            appearance: none;
+            color: transparent;
+            display: inline-block;
+            vertical-align: baseline;
+            font-size: 25px;
+            width: 10ch;
+        }
+
+        .rating::before {
+            --percent: calc(4.5/5*100%);
+            content: '★★★★★';
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: lightblue;
+            background: linear-gradient(90deg, #FFD600 var(--percent), lightblue var(--percent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .anotherSer {
+            width: 620px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            column-gap: 20px;
+        }
+        .anotherSer ul {
+            display: flex; 
+            flex-direction: row; 
+            width: 35ch; 
+            padding-left: 0; 
+            margin: 0;
+            width: 300px;
+        }
+        .anotherSer ul li{
+            width: 10ch; 
+            height: 1em; 
+            background-color: gainsboro;
+            margin: 2px;
+        }
+        .anotherSer p {
+            height: auto;
+            width: 35ch;
+        }
+        .anotherSer img {
+            width: 300px; 
+            height: 210px;
+            align-self: center;
+        }
+        h3 {
+            margin-top: 0;
+        }
+        .flexSer {
+            width: 100%;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 50px;
+            column-gap: 80px;
+        }
       </style>
 </head>
 <body>
@@ -147,56 +216,52 @@
                             <image x="20px" y="20px" width="40px" height="40px" xlink:href="serLogo.png" />
                         </svg> 
                     </div>              
-                    <h1 style="color: #FFFFFF; font-size: 30px;">The Indian restaurant Kohinoor</h1>
+                    <h1 style="color: #FFFFFF; font-size: 30px;">Намэстэ Энэтхэг ресторан</h1>
                     <p>
-                        <meter class="star1">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </meter> 4.1 (<span>385</span> reviews)
+                        <div>
+                            <meter class="rating" min="0" max="5" value="4.5" title="4.5 out of 5 stars"></meter>
+                        </div>
+                         4.5(<span>385</span> үзэлт)
                     </p>
-                    <p><span class="claimed">Claimed</span> Fast Food, Indian, Asian</p>
-                    <p><span class="openOrclosed">Open</span><time> 10:30 AM-12:00 PM</time><nav>See hours</nav></p>
+                    <p><span class="claimed">Баталгаажсан</span> Fast Food, Indian, Asian</p>
+                    <p><span class="openOrclosed">Онгорхой</span><time> 10:30 AM-12:00 PM</time><nav>Цаг харах</nav></p>
                 </div>
                 <div class="extraSelection">
-                    <button type="button">Write a review</button>
-                    <button type="button">Add Photo</button>
-                    <button type="button">Share</button>
-                    <button type="button">Save</button>
-                    <button type="button">Website Menu</button>
+                    <button type="button">Сэтгэгдэл үлдээх</button>
+                    <button type="button" class="but2">Зураг нэмэх</button>
+                    <button type="button" class="but2">Хуваалцах</button>
+                    <button type="button" class="but2">Хадгалах</button>
+                    <button type="button">Вэбсайтад зочлох</button>
                 </div>
-                <hr>
             </article>
+            <hr>
         </section>
         <section class="locAndHours">
-            <h2>Location and Hours</h2>
+            <h2>Байршил ба Цаг</h2>
             <div class="LocHour" style="display: flex; margin-bottom: 20px;">
                 <article class="maps" style="width: 330px; height: 400px">
                     <div class="gmap_canvas">
                         <iframe src="https://maps.google.com/maps?q=university%20of%20san%20francisco&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 100%; height: 100%;"></iframe>
                     </div>
-                    <p style="font-weight: bold;">Margad center 2nd floor opposite Geser monastery, ikh toiruu street 
-                        Chingeltei district 5th khoroo</p>
+                    <p style="font-weight: bold;">Шинэ салбар, Сүхбаатар дүүрэг, Олимпийн гудамж, Гадаад явдлын яамны баруун талд Grand Office</p>
                 </article>
                 <article class="schedule" style="width: 250px; height: 400px; display: flex;
                 align-items: center; flex-direction: column; padding-right: 70px; padding-left: 30px;">
                     <ul style="padding-left: 0; margin-top: 0; width: 100%;">
-                        <li>Mon <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
-                        <li>Tue <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
-                        <li>Wed <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
-                        <li>Thu <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
-                        <li>Fri <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
-                        <li>Sat <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
-                        <li>Sun <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
+                        <li>Даваа <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
+                        <li>Мягмар <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
+                        <li>Лхагва <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
+                        <li>Пүрэв <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
+                        <li>Баасан <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
+                        <li>Бямба <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
+                        <li>Ням <time datetime="08:00-03:00">11:00 AM - 3.30 PM</time></li>
                     </ul>
-                    <button type="button">Get Directions</button>
+                    <button type="button">Байршил хайх</button>
                 </article>
                 <article class="contuct1" style="width: 150px; height: 160px; border: 0.5px solid black; border-radius: 5px; 
-                display: flex; flex-direction: column; padding: 20px;">
+                    display: flex; flex-direction: column; padding: 20px;">
                     <div>
-                        <a href="">kohinoor.com</a>
+                        <a href="https://namaste.mn/">namaste.mn</a>
                         <i class="fa-brands fa-edge"></i>
                     </div>
                     <hr style="width: 100%; margin-top: 2px;">
@@ -214,55 +279,89 @@
             <hr>
         </section>
         <section class="youMightAlso">
-            <h2>You Might Also Consider</h2>
-            <article>
-                <h3></h3>
-                <hr>
-                <hr>
-                <hr>
-                <p>
-                    <span></span>
-                    <meter></meter>
-                    <p></p>
-                    <p></p>
-                </p>
-            </article>
-            <article>
-                <h3></h3>
-                <hr>
-                <hr>
-                <hr>
-                <p>
-                    <span></span>
-                    <meter></meter>
-                    <p></p>
-                    <p></p>
-                </p>
-            </article>
-            <article>
-                <h3></h3>
-                <hr>
-                <hr>
-                <hr>
-                <p>
-                    <span></span>
-                    <meter></meter>
-                    <p></p>
-                    <p></p>
-                </p>
-            </article>
-            <article>
-                <h3></h3>
-                <hr>
-                <hr>
-                <hr>
-                <p>
-                    <span></span>
-                    <meter></meter>
-                    <p></p>
-                    <p></p>
-                </p>
-            </article>
+            <h2>Сонирхож магадгүй газрууд</h2>
+            <div class="flexSer">
+                <article class="anotherSer">
+                    <img src="anoSer1.jpg" alt="">
+                    <div>
+                        <h3>Nameste 2</h3>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <p><span>Нээлттэй </span><time>12:00 PM</time> хүртэл</p>
+                        <p>
+                            <div>
+                                <meter class="rating" min="0" max="5" value="4.5" title="4.5 out of 5 stars"></meter>4.5 (<span>385</span> үзэлт)
+                            </div>
+                        </p>
+                        <p>At Namaste, Our valued guests are the heart and soul of our business. 
+                            We believe in creating a delightful and satisfying experience for each one of you. 
+                        </p>
+                    </div> 
+                </article>
+                <article class="anotherSer">
+                    <img src="anoSer1.jpg" alt="">
+                    <div>
+                        <h3>Nameste 2</h3>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <p><span>Нээлттэй </span><time>12:00 PM</time> хүртэл</p>
+                        <p>
+                            <div>
+                                <meter class="rating" min="0" max="5" value="4.5" title="4.5 out of 5 stars"></meter>4.5 (<span>385</span> үзэлт)
+                            </div>
+                        </p>
+                        <p>At Namaste, Our valued guests are the heart and soul of our business. 
+                            We believe in creating a delightful and satisfying experience for each one of you. 
+                        </p>
+                    </div> 
+                </article>
+                <article class="anotherSer">
+                    <img src="anoSer1.jpg" alt="">
+                    <div>
+                        <h3>Nameste 2</h3>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <p><span>Нээлттэй </span><time>12:00 PM</time> хүртэл</p>
+                        <p>
+                            <div>
+                                <meter class="rating" min="0" max="5" value="4.5" title="4.5 out of 5 stars"></meter>4.5 (<span>385</span> үзэлт)
+                            </div>
+                        </p>
+                        <p>At Namaste, Our valued guests are the heart and soul of our business. 
+                            We believe in creating a delightful and satisfying experience for each one of you. 
+                        </p>
+                    </div>
+                </article>
+                <article class="anotherSer">
+                    <img src="anoSer1.jpg" alt="">
+                    <div>
+                        <h3>Nameste 2</h3>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <p><span>Нээлттэй </span><time>12:00 PM</time> хүртэл</p>
+                        <p>
+                            <div>
+                                <meter class="rating" min="0" max="5" value="4.5" title="4.5 out of 5 stars"></meter>4.5 (<span>385</span> үзэлт)
+                            </div>
+                        </p>
+                        <p>At Namaste, Our valued guests are the heart and soul of our business. 
+                            We believe in creating a delightful and satisfying experience for each one of you. 
+                        </p>
+                    </div> 
+                </article>
+            </div>
         </section>
         <section class="recommended">
             <h2>Recommended Reviews</h2>
